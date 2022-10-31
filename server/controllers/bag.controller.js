@@ -2,6 +2,10 @@ import Bag from '../models/Bag.js'
 import { uploadImage, deleteImage } from '../libs/cloudinary.js'
 import fs from 'fs-extra';
 
+export const api = (req, res) => {
+  res.send("Welcome to api!")
+}
+
 export const all = async (req, res) => {
     try {
         const bags = await Bag.find();

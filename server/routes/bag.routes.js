@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { all, create, update, remove, one } from '../controllers/bag.controller.js'
+import { api, all, create, update, remove, one } from '../controllers/bag.controller.js'
 
 export const router = Router();
+
+router.get("/", api);
 
 router.get("/bag", all);
 

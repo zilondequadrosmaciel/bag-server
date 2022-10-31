@@ -11,10 +11,6 @@ app.use(fileUpload({
     tempFileDir: './upload'
 }));
 
-app.get("/", (req, res) => {
-  rend.send("Welcome to api")
-})
-
 app.use(router);
 
 export default app;
