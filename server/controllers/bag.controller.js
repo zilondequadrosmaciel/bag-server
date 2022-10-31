@@ -5,7 +5,7 @@ import fs from 'fs-extra';
 export const all = async (req, res) => {
     try {
         const bags = await Bag.find();
-        res.send(bags, { headers: {'Content-Type': 'application/octet-stream'}});
+        res.send(bags);
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
